@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Battle</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body onload="startBattle()">
+  <div id="searching">
+    <h2>🔍 Searching for opponent...</h2>
+    <p id="dots">.</p>
+  </div>
+
+  <div id="battle-ui" style="display:none">
+    <div id="battle">
+      <div id="player-stats">
+        <h2>Pemain</h2>
+        <p>HP: <span id="player-hp">100</span></p>
+      </div>
+
+      <div id="enemy-stats">
+        <h2><span id="enemy-name">???</span></h2>
+        <p>HP: <span id="enemy-hp">???</span></p>
+      </div>
+    </div>
+
+    <div id="actions">
+      <button onclick="playerAttack()">Attack</button>
+    </div>
+
+    <div id="log-box">
+      <p id="log">Pertarungan dimulai!</p>
+    </div>
+  </div>
+
+  <!-- Tambahin ini di dalam <body> -->
+<div id="victory-popup" style="display: none;">
+  <div class="popup-content">
+    <h2>🏆 Kamu Menang!</h2>
+    <p>Musuh berhasil dikalahkan. Siap untuk pertarungan selanjutnya?</p>
+    <button onclick="startBattle()">Next Battle</button>
+    <button onclick="location.href='index.html'">Back to Menu</button>
+  </div>
+</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
